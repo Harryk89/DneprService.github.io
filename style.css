@@ -50,7 +50,19 @@ header {
 	position: sticky;
 	top: 0;
 	background: #fff;
-	z-index: 9999;
+	z-index: 999;
+}
+
+.anim {
+	transform: translate(0px, 560px);
+	transition: all .2s;
+	opacity: 0;
+}
+
+.anim_end {
+	transform: translate(0px, 0px);
+	opacity: 1;
+	transition: all 1s;
 }
 
 .btn_header {
@@ -59,11 +71,12 @@ header {
 
 .btn_header button {
 	width: 170px;
-	height: 56px;
+	height: 48px;
 	background: #fff;
-	border: 1px solid #FF7272;
+	border: 2px solid #FF7272;
 	border-radius: 15px;
-	color: #FF7272; 
+	color: #FF7272;
+	font-weight: bold;
 }
 
 .banner, .about {
@@ -264,6 +277,10 @@ h1 {
     border-bottom: 1px solid #ccc;
 }
 
+.fa-chevron-right {
+	color: #FF7272;
+}
+
 .advantages h2 {
 	margin-bottom: 30px;
 }
@@ -276,6 +293,7 @@ h1 {
 .advantages_block {
 	flex-direction: column;
 	justify-content: center;
+	align-items: center;
 	width: 770px;
 	height: 400px;
 	border-radius: 20px;
@@ -287,7 +305,7 @@ h1 {
 
 .advantages_block h4 {
 	font-size: 28px;
-	margin-bottom: 15px;
+	margin: 15px 0;
 }
 
 .advantages_block:nth-child(1) {
@@ -335,6 +353,48 @@ footer ul {
 	padding-left: 0;
 }
 
+.modal_back {
+	height: 100vh;
+	width: 100vw;
+	/*opacity: .5;*/
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	background: rgba(0, 0, 0, .5);
+	transition: all .5s;
+}
+
+#modal_form {
+	position: relative;
+	flex-direction: column;
+	width: 300px;
+	padding: 30px 15px;
+	background: red;
+	border-radius: 10px;
+	margin: 0 auto;
+	margin-top: 200px;
+}
+
+#modal_form input {
+	background: #fff;
+	border-radius: 10px;
+	border: none;
+	margin-bottom: 10px;
+}
+
+#close {
+	position: absolute;
+	right: 10px;
+	top: 5px;
+	color: #fff;
+	cursor: pointer;
+}
+
+
+
+
+
 @media screen and (max-width: 1280px) {
 	h1 {
 		font-size: 54px;
@@ -346,10 +406,9 @@ footer ul {
 
 	.btn_header button {
 		width: 150px;
-		height: 56px;
 	}
 
-	.banner_img img {
+	.banner_img img, .about_img img {
 		width: 300px;
 	}
 
@@ -357,10 +416,10 @@ footer ul {
 		height: 516px;
 	}
 
-	.about_img img {
+	/*.about_img img {
 		width: 250px;
 	}
-
+*/
 	.callback_img img {
 		width: 220px;
 	}
