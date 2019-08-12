@@ -69,7 +69,7 @@ header {
 	margin-left: auto;
 }
 
-.btn_header button {
+.btn_header button, #modal_form button {
 	width: 170px;
 	height: 48px;
 	background: #fff;
@@ -77,6 +77,13 @@ header {
 	border-radius: 15px;
 	color: #FF7272;
 	font-weight: bold;
+}
+
+#modal_form button {
+	margin: 0 auto;
+	height: 35px;
+	border: 1px solid #FF7272;
+	border-radius: 13px;
 }
 
 .banner, .about {
@@ -245,19 +252,19 @@ h1 {
     height: 0px;
     position: relative;
     z-index: 10;
-    -webkit-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
-    -moz-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
-    -o-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
-    -ms-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
-    transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+    -webkit-transition: height 0.5s ease-in-out, box-shadow 0.6s linear;
+    -moz-transition: height 0.5s ease-in-out, box-shadow 0.6s linear;
+    -o-transition: height 0.5s ease-in-out, box-shadow 0.6s linear;
+    -ms-transition: height 0.5s ease-in-out, box-shadow 0.6s linear;
+    transition: height 0.5s ease-in-out, box-shadow 0.6s linear;
 }
 
 .ac-container input:checked ~ article {
-     -webkit-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
-    -moz-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
-    -o-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
-    -ms-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
-    transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+     -webkit-transition: height 0.5s ease-in-out, box-shadow 0.6s linear;
+    -moz-transition: height 0.5s ease-in-out, box-shadow 0.6s linear;
+    -o-transition: height 0.5s ease-in-out, box-shadow 0.6s linear;
+    -ms-transition: height 0.5s ease-in-out, box-shadow 0.6s linear;
+    transition: height 0.5s ease-in-out, box-shadow 0.6s linear;
     /*box-shadow: 0px 0px 0px 1px rgba(155,155,155,0.3);*/
     height: auto;
 }
@@ -369,18 +376,25 @@ footer ul {
 	position: relative;
 	flex-direction: column;
 	width: 300px;
-	padding: 30px 15px;
-	background: red;
+	padding: 35px 15px;
+	background: rgba(74, 74, 74, 0.9);
 	border-radius: 10px;
 	margin: 0 auto;
 	margin-top: 200px;
 }
 
 #modal_form input {
-	background: #fff;
+	background: #ccc;
 	border-radius: 10px;
 	border: none;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
+	height: 28px;
+	padding-left: 10px;
+	font-size: 16px;
+}
+
+#modal_form input:focus {
+	outline: none;
 }
 
 #close {
@@ -389,6 +403,22 @@ footer ul {
 	top: 5px;
 	color: #fff;
 	cursor: pointer;
+	font-size: 19px;
+	font-weight: bold;
+	transition: all .5s;
+	transform: rotate(0deg);
+}
+
+#close:hover {
+	transition: all .5s;
+	transform: rotate(180deg);
+}
+
+#modal_form h6 {
+	text-align: center;
+	color: #fff;
+	font-size: 24px;
+	margin-bottom: 15px;
 }
 
 
