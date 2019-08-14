@@ -14,6 +14,8 @@ if(($(window).scrollTop() + $(window).height()) > $('.banner').offset().top){
         $('.banner_desc').addClass('anim_end');
     } 
 
+let a = 1;
+
 $(window).scroll(function(){
     if(($(window).scrollTop() + $(window).height()) > $('.about').offset().top){
         $('.about_desc').addClass('anim_end');
@@ -24,6 +26,34 @@ $(window).scroll(function(){
     if(($(window).scrollTop() + $(window).height()) > $('.zakaz_parts').offset().top){
         $('.zakaz_desc').addClass('anim_end');
     }
+
+    // trace(' $(.advantages_block).offset()', $('.advantages_block').offset());
+    // console.log('offset  :::', $(window).scrollTop());
+    // let top =  $('.advantages_block').offset().top;
+    // let windowTop =  $(window).scrollTop();
+    // a -= 0.01;
+    // // if (top - windowTop <= 150) {
+    // //     trace('aaaa ::', a)
+    // //     $('.advantages_block').css('opacity', `${a}`);
+    // // } 
+    // $('.advantages_block').each(function(i, element) {
+    //     $(element).css('opacity', function() {
+    //         let top =  $(this).offset().top;
+    //         let b = 150 + 50*i;
+    //         // let windowTop =  $(window).scrollTop();
+    //             if (top - windowTop <= b ) {
+    //                 trace('diff ::', i, top - windowTop)
+    //                 return 0.2
+    //             } 
+    //     });
+    // })
+    // $('.advantages_block').css('opacity', function() {
+    //     let top =  $(this).offset().top;
+    //     // let windowTop =  $(window).scrollTop();
+    //         if (top - windowTop <= 150) {
+    //             return 0.2
+    //         } 
+    // });
 })
 
 $('.modal_back').hide();
@@ -39,4 +69,3 @@ $('#close').click(function(e) {
 })
 
 console.log('111111-window--', ($(window).scrollTop() + $(window).height()))
-console.log('offset  :::', $('.about_desc').offset().top)
