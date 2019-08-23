@@ -245,12 +245,12 @@ h1 {
     height: 24px;
     right: 13px;
     top: 7px;
-    background: transparent url(http://netcribe.com/example/arrow_down.png) no-repeat center center;  
+    /* background: transparent url(http://netcribe.com/example/arrow_down.png) no-repeat center center;   */
 }
 
-.ac-container input:checked + label:hover:after {
+/* .ac-container input:checked + label:hover:after {
     background-image: url(http://netcribe.com/example/arrow_up.png);
-}
+} */
 
 .ac-container input {
     display: none;
