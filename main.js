@@ -68,4 +68,35 @@ $('#close').click(function(e) {
     $('.modal_back').hide();
 })
 
+// $('.label_price').click(function(e) {
+// // $('.label_price').on('change', function(e) {
+//     // e.preventDefault();
+//     console.log('label_price checked', $(this));
+//     console.log('label_price attr', $(this).attr('checked'));
+//     console.log('label_price', $(this).prop('checked'));
+
+//     if($(this).is(":checked")) {
+//         console.log('checked');
+//     }else{
+//         console.log('NO checked');
+//     }
+
+//     // if($(this).prop('checked')){
+//     //     console.log('checked');
+//     // }else{
+//     //     console.log('NO checked');
+//     // }
+// })
+
+
+$(function(){
+    $('#agree').on('change', function(){
+        if($('#agree').prop('checked')){
+            $('#submit').attr('disabled', false);
+        }else{
+            $('#submit').attr('disabled', true);
+        }
+    });
+});
+
 console.log('111111-window--', ($(window).scrollTop() + $(window).height()))

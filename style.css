@@ -126,6 +126,16 @@ h1 {
 	border: none;
 	border-radius: 15px;
 	color: #fff;
+	margin-top: 30px;
+}
+
+.banner_desc ul {
+	margin-top: 30px;
+	padding-left: 0;
+	justify-content: space-around;
+	font-size: 24px;
+	font-weight: bold;
+	color: #3D3D3B !important;
 }
 
 .price {
@@ -355,6 +365,7 @@ footer {
 	justify-content: space-between;
 	padding: 2vw 5vw;
 	align-items: center;
+	background: #F0F0F0;
 }
 
 footer ul {
@@ -486,6 +497,10 @@ footer ul {
 
 	.banner_img {
 		display: none;
+	}
+
+	.banner_desc ul {
+		flex-direction: column;
 	}
 
 	.about_img img {
