@@ -101,14 +101,19 @@ $(function(){
 
 console.log('111111-window--', ($(window).scrollTop() + $(window).height()))
 
-$('#modal_form').on('submit', function(e){
+$('#btn_form').on('click', function(e){
     e.preventDefault();
-    var fd = new FormData( this );
+    trace('212121212121212121')
+    // var fd = new FormData( $(modal_form) );
+    var fd = $('#modal_form').serialize();
+    // var fd = new FormData( this );
     $.ajax({
     url: 'send.php',
     type: 'POST',
     contentType: false, 
-    processData: false, 
+    processData: false,
+    crossDomain: true,
+    dataType: "json",
     data: fd,
     success: function(msg){
             if(msg == 'ok') {
