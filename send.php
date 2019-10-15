@@ -6,22 +6,24 @@
 	header('Access-Control-Max-Age: 1000');
 	header('Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With');
 
-	require 'PHPMailer/class.phpmailer.php';
-	require 'PHPMailer/class.smtp.php';
-	require 'PHPMailer/vendor/PHPMailerAutoload.php';
+	// require 'PHPMailer/class.phpmailer.php';
+	// require 'PHPMailer/class.smtp.php';
+	require './PHPMailer/PHPMailerAutoload.php';
 	// Переменные
 	$name = $_POST['name'];
 	$number = $_POST['number'];
 	$email = $_POST['email'];
 	// Настройки
 	$mail = new PHPMailer;
+	$mail->SMTPDebug = 2;
+	$mail->Debugoutput = 'html';
 	$mail->isSMTP(); 
-	$mail->Host = 'ssl://smtp.gmail.com'; 
+	$mail->Host = 'smtp.gmail.com'; 
 	$mail->SMTPAuth = true; 
 	$mail->Username = 'sapsayartyom@gmail.com'; // Ваш логин в Яндексе. Именно логин, без @yandex.ru
 	$mail->Password = 'NuttertoolS1991'; // Ваш пароль
 	$mail->SMTPSecure = 'ssl'; 
-	$mail->Port = 465;
+	$mail->Port = 587;
 	$mail->setFrom('sapsayartyom@gmail.com'); // Ваш Email
 	$mail->addAddress('sapsayartyom@gmail.com'); // Email получателя
 	//$mail->addAddress('example@gmail.com'); // Еще один email, если нужно.
