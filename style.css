@@ -492,74 +492,39 @@ footer ul {
 
 @media (max-width: 780px) {
 
+	header {
+		height: 75px;
+	}
+
+	.banner_desc ul {
+		margin-top: 20px;
+	}
+
+	.banner_desc button {
+		margin-top: 20px;
+	}
+
 	.tel_footer {
 		width: 100vw;
 	}
 
 	.tel li a, .tel_foot li a {
 		position: relative;
-	}
-
-	.tel_foot li div {
-		margin-top: 20px;
-		width: 46px;
-		height: 2px;
+		padding: 5px;
 		background: red;
-		position: absolute;
-		margin-left: calc(50% - 23px);
-		transition: all .3s ;
-		-webkit-transition: all .3s ;
-		-moz-transition: all .3s ;
-		-ms-transition: all .3s ;
-		-o-transition: all .3s ;
+		border-radius: 5px;
 	}
 
-	.tel_foot li:active div, .tel_foot li:hover div {
-		margin-top: -1px;
-		width: 180px;
-		height: 20px;
-		border-radius:5px;
-		margin-left: calc(50% - 90px);
-		transition: all .3s ;
-		-webkit-transition: all .3s ;
-		-moz-transition: all .3s ;
-		-ms-transition: all .3s ;
-		-o-transition: all .3s ;
-		-webkit-border-radius:5px;
-		-moz-border-radius:5px;
-		-ms-border-radius:5px;
-		-o-border-radius:5px;
+	.tel_foot li {
+		margin-top: 5px;
 	}
 
-	.tel li div {
-		margin-top: 35px;
-		width: 60px;
-		height: 3px;
-		background: red;
-		position: absolute;
-		margin-left: calc(50% - 30px);
-		transition: all .3s ;
-		-webkit-transition: all .3s ;
-		-moz-transition: all .3s ;
-		-ms-transition: all .3s ;
-		-o-transition: all .3s ;
+	.banner_desc ul li:hover a, .tel_foot li:hover a {
+		color: #fff;
 	}
-	
-	.tel li:active div, .tel li:hover div {
-		margin-top: -1px;
-		width: 250px;
-		height: 30px;
-		border-radius:5px;
-		margin-left: calc(50% - 125px);
-		transition: all .3s ;
-		-webkit-transition: all .3s ;
-		-moz-transition: all .3s ;
-		-ms-transition: all .3s ;
-		-o-transition: all .3s ;
-		-webkit-border-radius:5px;
-		-moz-border-radius:5px;
-		-ms-border-radius:5px;
-		-o-border-radius:5px;
+
+	.tel li:hover a {
+		color: #000;
 	}
 
 	nav {
@@ -567,12 +532,12 @@ footer ul {
 	}
 
 	.btn_header button {
-		width: 40px;
-		height: 40px;
-		border-radius: 50%;
+		width: 70px;
+		height: 35px;
+		border-radius: 25px;
 		color: #fff;
 		background: #FF0000;
-		font-size: 8px;
+		font-size: 11px;
 		padding: 0;
 	}
 
@@ -593,7 +558,7 @@ footer ul {
 	}
 
 	h1 {
-		font-size: 44px;
+		font-size: 42px;
 	}
 
 	h2 {
@@ -601,7 +566,7 @@ footer ul {
 	}
 
 	.banner, .about, footer {	
-		padding-top: 50px;
+		padding-top: 25px;
 		padding-bottom: 50px;
 	}
 
@@ -628,16 +593,20 @@ footer ul {
 	}
 
 	.callback_img img, .zakaz_img img  {
-		width: 48%;
+		width: 35%;
 		margin-top: 30px;
-	}	
+	}
+
+	.zakaz_img img {
+		margin-top: 0;
+	}
 
 	.about_desc {
 		width: 80vw;
 	}
 
 	.about_img img {
-		width: 200px;
+		width: 150px;
 	}
 
 	.advantages_block {
@@ -656,6 +625,15 @@ footer ul {
 	}
 
 	.banner_desc button, .callback_desc button, .zakaz_desc button {
-	    width: 100%;
+		width: 100%;
+		font-size: 20px;
+	}
+
+	.about_desc p {
+		text-align: justify;
+	}
+
+	.callback, .zakaz_parts {
+		padding: 40px 5vw;
 	}
 }
