@@ -195,6 +195,7 @@ h1 {
 
 .banner_desc span {
 	color: #FF0000;
+	font-family: Gilroy-SemiBold;
 }
 
 .banner_desc p, .callback_desc p, .zakaz_desc p {
@@ -268,6 +269,18 @@ h1 {
 .advantages {
 	text-align: center;
 	padding: 80px 5vw;
+	padding-bottom: 30px;
+}
+
+
+.advantages h3 span {
+	color: red;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.advantages h3 {
+	font-size: 26px;
 }
 
 
@@ -532,6 +545,73 @@ footer ul {
 
 
 @media screen and (max-width: 1280px) {
+
+	.logo {
+		margin-left: 50px;
+	}
+
+	#menu__toggle {
+		opacity: 0;
+		display: none;
+	  }
+	  
+	  #menu__toggle:checked ~ .menu__btn > span {
+		transform: rotate(45deg);
+	  }
+	  #menu__toggle:checked ~ .menu__btn > span::before {
+		top: 0;
+		transform: rotate(0);
+	  }
+	  #menu__toggle:checked ~ .menu__btn > span::after {
+		top: 0;
+		transform: rotate(90deg);
+	  }
+	  #menu__toggle:checked ~ .menu__box {
+		visibility: visible;
+		left: 0;
+	  }
+	  
+	  .menu__btn {
+		display: flex;
+		align-items: center;
+		position: fixed;
+		top: 25px;
+		left: 20px;
+	  
+		width: 26px;
+		height: 26px;
+	  
+		cursor: pointer;
+		z-index: 1;
+	  }
+	  
+	  .menu__btn > span,
+	  .menu__btn > span::before,
+	  .menu__btn > span::after {
+		display: block;
+		position: absolute;
+	  
+		width: 100%;
+		height: 2px;
+	  
+		background-color: #616161;
+	  
+		transition-duration: .25s;
+	  }
+	  .menu__btn > span::before {
+		content: '';
+		top: -8px;
+	  }
+	  .menu__btn > span::after {
+		content: '';
+		top: 8px;
+	  }
+
+
+
+
+
+
 	h1 {
 		font-size: 54px;
 	}
@@ -696,7 +776,8 @@ footer ul {
 	}
 
 	h1 {
-		font-size: 42px;
+		/* font-size: 40px; */
+		font-size: 2.5rem;
 	}
 
 	h2 {
@@ -716,6 +797,10 @@ footer ul {
 
 	.callback_desc ul, .zakaz_desc ul, .callback_desc ul, .banner_desc ul {
 		flex-direction: column;
+	}
+
+	.price {
+		padding: 40px 5vw;
 	}
 
 	.price h2 {
@@ -773,5 +858,14 @@ footer ul {
 
 	.callback, .zakaz_parts {
 		padding: 40px 5vw;
+	}
+
+	.advantages h3 span {
+		color: red;
+		font-size: 26px;
+	}
+	
+	.advantages h3 {
+		font-size: 20px;
 	}
 }

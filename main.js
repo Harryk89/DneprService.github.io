@@ -20,13 +20,14 @@ $("#mob_menu").on("click","a", function (event) {
     //анимируем переход на расстояние - top за 1500 мс
     $('body,html').animate({scrollTop: top}, 1500);
     // animation();
-    $('.mob_nav').toggleClass('open');
-    $('.mob_btn_menu').toggleClass('active');
+    // $('.mob_nav').toggleClass('open');
+    // $('.mob_btn_menu').toggleClass('active');
 });
 
-$(".mob_btn_menu").on("click", function (event) {
-    event.preventDefault();
-    $(this).toggleClass('active');
+// $(".mob_btn_menu").on("click", function (event) {
+$(".menu__btn").on("click", function (event) {
+    // event.preventDefault();
+    // $(this).toggleClass('active');
     $('.mob_nav').toggleClass('open');
 });
 
